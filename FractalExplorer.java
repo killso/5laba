@@ -93,10 +93,10 @@ public  class FractalExplorer {
     }
     public class Reset implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            if (e.getActionCommand().equals("Сохранить")) {
+            if (e.getActionCommand().equals("Save")) {
                 JFileChooser finder = new JFileChooser();
                 JFileChooser chooser = new JFileChooser();
-                FileFilter filter = new FileNameExtensionFilter("PNG Изображения", "png");
+                FileFilter filter = new FileNameExtensionFilter("PNG Image", "png");
                 chooser.setFileFilter(filter);
                 chooser.setAcceptAllFileFilterUsed(false);
 
@@ -108,7 +108,7 @@ public  class FractalExplorer {
                     }
                     catch(Exception exception) {
                         JOptionPane.showMessageDialog(pic, exception.getMessage(),
-                                "Не удалось сохранить", JOptionPane.ERROR_MESSAGE);
+                                "Cannot Save Image", JOptionPane.ERROR_MESSAGE);
                     }
                 }
                 return;
